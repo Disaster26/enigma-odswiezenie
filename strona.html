@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Szkoła Jazdy ENIGMA Kielce - prawo jazdy od 1991 roku</title>
+<meta name="description" content="Szkoła Jazdy ENIGMA w Kielcach. Kursy prawa jazdy kat. AM, A, A1, A2, B, B1, B+E, C, C+E, D. Od 1991 roku, ponad 50 000 kursantów, certyfikat ISO 9001. Zapisy online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1622; --navy:#103A63; --navy-d:#0A2745; --blue:#1C6DD0; --blue-d:#14509B;
+  --yellow:#FFC40C; --paper:#fff; --mist:#F3F6FA; --line:#DCE4ED; --muted:#5B6B7C;
+  --r:14px; --shadow:0 2px 4px rgba(11,22,34,.06),0 12px 28px rgba(11,22,34,.08);
+  --ease:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Barlow Condensed',Inter,sans-serif;font-weight:700;line-height:1.05;letter-spacing:.01em;margin:0}
+h2{font-size:clamp(30px,4.2vw,46px);text-transform:uppercase}
+h3{font-size:22px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sec{padding:76px 0}
+.sec--mist{background:var(--mist)}
+.lead{font-size:18px;color:var(--muted);max-width:62ch;margin:14px 0 0}
+.eyebrow{font:600 13px/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin:0 0 12px}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;text-decoration:none;
+  font:600 16px/1 Inter;padding:16px 26px;border-radius:999px;transition:transform .16s var(--ease),background .2s ease,box-shadow .2s ease}
+.btn:active{transform:scale(.97)}
+.btn--y{background:var(--yellow);color:#20170A;box-shadow:0 6px 18px rgba(255,196,12,.35)}
+.btn--y:hover{background:#FFD23F}
+.btn--b{background:var(--blue);color:#fff}
+.btn--b:hover{background:var(--blue-d)}
+.btn--ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+.btn--ghost:hover{background:rgba(255,255,255,.12)}
+.btn--sm{padding:12px 20px;font-size:15px}
+
+/* ---------- pasek informacyjny + nagłówek ---------- */
+.topbar{background:var(--navy-d);color:#C9DAEC;font-size:14px}
+.topbar .wrap{display:flex;gap:22px;align-items:center;justify-content:space-between;min-height:40px;flex-wrap:wrap}
+.topbar a{text-decoration:none;color:#fff;font-weight:600}
+.topbar .t-l{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:26px;min-height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand .mark{width:46px;height:46px;border-radius:11px;background:var(--blue);display:grid;place-items:center;
+  color:#fff;font:700 27px/1 'Barlow Condensed';box-shadow:0 3px 10px rgba(28,109,208,.35)}
+.brand b{font:700 23px/1 'Barlow Condensed';letter-spacing:.03em;display:block}
+.brand span{font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.menu{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-weight:600;font-size:15px;padding:8px 0;position:relative}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--blue);transition:right .22s var(--ease)}
+.menu a:hover::after{right:0}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.tel{font:700 17px/1 Inter;text-decoration:none;white-space:nowrap}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;background:var(--navy-d);overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(10,39,69,.95) 0%,rgba(10,39,69,.78) 45%,rgba(10,39,69,.35) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:84px;padding-bottom:84px}
+.hero h1{font-size:clamp(38px,6vw,68px);text-transform:uppercase;max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero p{font-size:19px;max-width:54ch;color:#D9E6F3;margin:18px 0 0}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.motto{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 18px;border-radius:999px;
+  background:rgba(255,196,12,.14);border:1px solid rgba(255,196,12,.4);font-weight:600;font-size:15px;color:#FFE08A}
+.trust{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.16);background:rgba(7,28,50,.55)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 20px}
+.trust b{display:block;font:700 30px/1 'Barlow Condensed';color:var(--yellow)}
+.trust span{font-size:13.5px;color:#C9DAEC}
+
+/* ---------- karty kategorii ---------- */
+.head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:30px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;
+  text-decoration:none;transition:transform .18s var(--ease),box-shadow .18s var(--ease),border-color .18s ease}
+.cat:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#BFD3E6}
+.cat:active{transform:translateY(-1px) scale(.995)}
+.plate{width:52px;height:52px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;
+  font:700 24px/1 'Barlow Condensed';letter-spacing:.02em;margin-bottom:16px}
+.cat h3{font-size:20px;margin-bottom:4px}
+.cat .d{font-size:14.5px;color:var(--muted);flex:1;margin:6px 0 16px}
+.cat .p{font:700 15px/1 Inter;color:var(--ink)}
+.cat .p b{font-family:'Barlow Condensed';font-size:27px;letter-spacing:.01em}
+.cat .go{margin-top:12px;font-weight:600;font-size:14.5px;color:var(--blue)}
+
+/* ---------- terminy ---------- */
+.terms{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+.tlist{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.trow{display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line)}
+.trow:last-child{border-bottom:0}
+.trow:nth-child(odd){background:#FAFCFE}
+.date{text-align:center;background:var(--navy);color:#fff;border-radius:9px;padding:7px 4px}
+.date b{display:block;font:700 22px/1 'Barlow Condensed'}
+.date span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.trow .what{font-weight:600}
+.trow .what small{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.badge{font:600 13px/1 Inter;padding:7px 13px;border-radius:999px;background:#E8F2FD;color:var(--blue-d);white-space:nowrap}
+.note{background:var(--navy);color:#DCE9F6;border-radius:var(--r);padding:28px}
+.note h3{color:#fff;margin-bottom:10px}
+.note ul{margin:14px 0 0;padding-left:18px}
+.note li{margin:9px 0;font-size:15.5px}
+
+/* ---------- dlaczego ---------- */
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;gap:18px}
+.ico{flex:0 0 46px;height:46px;border-radius:12px;background:#E8F2FD;color:var(--blue);display:grid;place-items:center}
+.ico svg{width:24px;height:24px}
+.card p{margin:7px 0 0;font-size:15.5px;color:var(--muted)}
+
+/* ---------- szkolenia ---------- */
+.pro{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
+.pro-list{list-style:none;margin:22px 0 0;padding:0}
+.pro-list li{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px dashed var(--line)}
+.pro-list b{font-family:'Barlow Condensed';font-size:22px;white-space:nowrap}
+.pro-img{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+
+/* ---------- dofinansowania ---------- */
+.fund{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-d) 100%);color:#fff;border-radius:18px;padding:44px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.fund h2{color:#fff}
+.fund p{color:#CFE0F0}
+.fund .big{font:700 clamp(54px,8vw,92px)/1 'Barlow Condensed';color:var(--yellow)}
+.fund-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:24px}
+.fund-box ul{margin:12px 0 0;padding-left:18px}
+.fund-box li{margin:8px 0;font-size:15.5px;color:#DCE9F6}
+
+/* ---------- kontakt ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+.cbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.crow{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.crow:last-child{border-bottom:0}
+.crow .ico{flex:0 0 38px;height:38px}
+.crow .ico svg{width:19px;height:19px}
+.crow b{display:block;font-size:15px}
+.crow a{font-weight:600;text-decoration:none}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:330px;background:var(--mist);
+  display:grid;place-items:center;text-align:center;padding:26px}
+
+/* ---------- stopka ---------- */
+footer{background:var(--ink);color:#9FB2C6;padding:54px 0 110px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;font:600 14px/1 Inter;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin:9px 0}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:22px;font-size:14px}
+
+/* ---------- pasek mobilny ---------- */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.mbar .btn{flex:1;justify-content:center}
+
+@media (max-width:1000px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .terms,.pro,.contact,.fund{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .sec{padding:54px 0}
+  .menu,.nav-cta .btn,.topbar .t-l{display:none}
+  .burger{display:block}
+  .trust .wrap{grid-template-columns:repeat(2,1fr);gap:16px}
+  .mbar{display:flex}
+  .hero .wrap{padding-top:54px;padding-bottom:54px}
+  .fund{padding:28px}
+  footer{padding-bottom:96px}
+}
+@media (max-width:420px){ .cats{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="t-l">
+    <span>ul. Paderewskiego 14, Kielce</span>
+    <span>pon. - pt. 10:00 - 18:00</span>
+    <span>Kielce i Skarżysko-Kamienna</span>
+  </div>
+  <div><a href="tel:+48413431180">41 343 11 80</a> &nbsp;|&nbsp; <a href="tel:+48602309181">602 309 181</a></div>
+</div></div>
+
+<header><div class="wrap nav">
+  <a class="brand" href="#">
+    <span class="mark">L</span>
+    <span><b>ENIGMA</b><span>Szkoła Jazdy Kielce</span></span>
+  </a>
+  <ul class="menu">
+    <li><a href="#kategorie">Prawo jazdy</a></li>
+    <li><a href="#szkolenia">Szkolenia</a></li>
+    <li><a href="#terminy">Terminy</a></li>
+    <li><a href="#dofinansowania">Dofinansowania</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a class="tel" href="tel:+48602309181">602 309 181</a>
+    <a class="btn btn--y btn--sm" href="#zapisy">Zapisz się</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <img class="bg" src="img/opt/hero_budynek.webp" alt="Flota pojazdów szkoleniowych Szkoły Jazdy ENIGMA w Kielcach">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#FFD23F">Kielce i Skarżysko-Kamienna &middot; od 1991 roku</p>
+    <h1>Prawo jazdy <em>w Kielcach</em> od 35 lat</h1>
+    <p>Od motocykla po ciągnik siodłowy. Własna flota, własny plac manewrowy i kadra, która wyszkoliła ponad 50 tysięcy kierowców.</p>
+    <div class="motto">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Tym jeździsz, tym zdajesz - na egzamin w WORD podstawiamy nasz pojazd
+    </div>
+    <div class="cta">
+      <a class="btn btn--y" href="#zapisy">Zapisz się na kurs</a>
+      <a class="btn btn--ghost" href="#terminy">Zobacz najbliższe terminy</a>
+    </div>
+  </div>
+  <div class="trust"><div class="wrap">
+    <div><b>35 lat</b><span>nieprzerwanie od 1 września 1991</span></div>
+    <div><b>50 000+</b><span>wyszkolonych kursantów</span></div>
+    <div><b>ISO 9001</b><span>certyfikat PN-EN ISO 9001:2015-10</span></div>
+    <div><b>12</b><span>kategorii prawa jazdy w jednym miejscu</span></div>
+  </div></div>
+</section>
+
+<section class="sec" id="kategorie">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Kursy prawa jazdy</p>
+        <h2>Wybierz kategorię</h2>
+        <p class="lead">Ceny z naszego e-sklepu. W każdej kategorii możesz rozłożyć płatność na raty i zapisać się online bez wizyty w biurze.</p>
+      </div>
+      <a class="btn btn--b btn--sm" href="#">Pełny cennik</a>
+    </div>
+
+    <div class="cats">
+      <a class="cat" href="#">
+        <span class="plate">B</span>
+        <h3>Samochód osobowy</h3>
+        <span class="d">Najpopularniejszy kurs. Dostępny też jako automat, BUS oraz w wersji dla osób z niepełnosprawnością.</span>
+        <span class="p">od <b>3 800</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">A</span>
+        <h3>Motocykl</h3>
+        <span class="d">Kategorie A, A1 i A2. Motocykle to nasza pasja, mamy własny plac i sprzęt na każdy poziom.</span>
+        <span class="p">od <b>3 400</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">C</span>
+        <h3>Samochód ciężarowy</h3>
+        <span class="d">Szkolimy na MAN TGL z automatyczną skrzynią biegów, pierwszej takiej ciężarówce w Kielcach.</span>
+        <span class="p">od <b>5 000</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">C+E</span>
+        <h3>Ciągnik z naczepą</h3>
+        <span class="d">Pierwszy w Kielcach ciągnik siodłowy z naczepą. Naczepa spełnia wymagania egzaminacyjne od 2026 roku.</span>
+        <span class="p">od <b>6 000</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">D</span>
+        <h3>Autobus</h3>
+        <span class="d">Kurs po kategorii C lub po B, także w pakiecie z kwalifikacją wstępną.</span>
+        <span class="p">od <b>7 000</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">B+E</span>
+        <h3>Przyczepa</h3>
+        <span class="d">Pierwszy w Kielcach elektryczny zestaw szkoleniowy na kategorię B+E.</span>
+        <span class="p">od <b>2 500</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">AM</span>
+        <h3>Motorower</h3>
+        <span class="d">Od 14 roku życia. Najszybsza droga do samodzielnego poruszania się po mieście.</span>
+        <span class="p">od <b>1 700</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+      <a class="cat" href="#">
+        <span class="plate">B1</span>
+        <h3>Czterokołowiec</h3>
+        <span class="d">Kategoria B1 od 16 roku życia, pełny kurs teoretyczny i praktyczny.</span>
+        <span class="p"><b>3 600</b> zł</span>
+        <span class="go">Sprawdź szczegóły &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--mist" id="terminy">
+  <div class="wrap">
+    <p class="eyebrow">Zapisy</p>
+    <h2>Najbliższe starty kursów</h2>
+    <p class="lead" style="margin-bottom:30px">Kursy prawa jazdy startują w każdy poniedziałek, kursy kwalifikacji zawodowej we wtorki. Zapisać się możesz do dnia rozpoczęcia.</p>
+    <div class="terms">
+      <div class="tlist">
+        <div class="trow"><span class="date"><b>05</b><span>paź</span></span><span class="what">Kursy prawa jazdy<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">16:00</span></div>
+        <div class="trow"><span class="date"><b>06</b><span>paź</span></span><span class="what">Kwalifikacja zawodowa<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">17:00</span></div>
+        <div class="trow"><span class="date"><b>12</b><span>paź</span></span><span class="what">Kursy prawa jazdy<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">16:00</span></div>
+        <div class="trow"><span class="date"><b>13</b><span>paź</span></span><span class="what">Kwalifikacja zawodowa<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">17:00</span></div>
+        <div class="trow"><span class="date"><b>19</b><span>paź</span></span><span class="what">Kursy prawa jazdy<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">16:00</span></div>
+        <div class="trow"><span class="date"><b>20</b><span>paź</span></span><span class="what">Kwalifikacja zawodowa<small>ENIGMA Kielce, ul. Paderewskiego 14</small></span><span class="badge">17:00</span></div>
+      </div>
+      <div class="note">
+        <h3>Jak wygląda zapis</h3>
+        <ul>
+          <li>Wybierasz kategorię i rezerwujesz miejsce online albo telefonicznie.</li>
+          <li>Badanie lekarskie zrobisz w naszym budynku, u współpracujących lekarzy.</li>
+          <li>Teoria stacjonarnie lub w formie e-learningu, jazdy ustalasz z instruktorem.</li>
+          <li>Na egzamin w WORD podstawiamy ten sam pojazd, którym jeździłeś.</li>
+        </ul>
+        <a class="btn btn--y" style="margin-top:22px" href="#zapisy">Zarezerwuj miejsce</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Dlaczego ENIGMA</p>
+    <h2>Cztery rzeczy, których nie ma gdzie indziej</h2>
+    <div class="why" style="margin-top:30px">
+      <div class="card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h2v-3.6a1 1 0 0 0-.3-.7l-2.8-2.8a1 1 0 0 0-.7-.3H15"/><path d="M3 16h2m-2 0V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v9"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span>
+        <div>
+          <h3>Tym jeździsz, tym zdajesz</h3>
+          <p>Na egzamin państwowy w WORD Kielce podstawiamy nasz pojazd szkoleniowy. Formalności załatwiamy za Ciebie, a Ty zdajesz autem, które znasz.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h5l-3 7"/><circle cx="12" cy="12" r="10"/></svg></span>
+        <div>
+          <h3>Pierwsi w Kielcach</h3>
+          <p>Pierwsza elektryczna nauka jazdy, pierwsza ciężarówka z automatyczną skrzynią, pierwszy ciągnik siodłowy z naczepą i pierwszy elektryczny zestaw B+E.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2a7 7 0 0 0-14 0v2"/><path d="M5 20h14"/><path d="M12 11v9"/></svg></span>
+        <div>
+          <h3>Kursy dla osób z niepełnosprawnością</h3>
+          <p>Mamy samochód z automatyczną skrzynią przystosowany do niepełnosprawności kończyn dolnych i górnych. Egzamin można zdawać naszym pojazdem.</p>
+        </div>
+      </div>
+      <div class="card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.3 8 10 4.6-.7 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div>
+          <h3>Badania i formalności na miejscu</h3>
+          <p>Lekarz i psycholog przyjmują w budynku szkoły, w cenach niższych niż w gabinetach. Nie musisz niczego organizować osobno.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--mist" id="szkolenia">
+  <div class="wrap pro">
+    <div>
+      <p class="eyebrow">Dla kierowców zawodowych</p>
+      <h2>Szkolenia i uprawnienia</h2>
+      <p class="lead">ENIGMA to nie tylko prawo jazdy. Prowadzimy kursy, które otwierają drogę do pracy w transporcie, logistyce i budownictwie.</p>
+      <ul class="pro-list">
+        <li><span>Kwalifikacja wstępna przyspieszona</span><b>2 600 zł</b></li>
+        <li><span>Operator wózka widłowego</span><b>1 500 zł</b></li>
+        <li><span>Operator koparko-ładowarki kl. III</span><b>2 150 zł</b></li>
+        <li><span>Nalewaki NO TDT</span><b>od 1 450 zł</b></li>
+        <li><span>Czas pracy kierowcy i tachografy</span><b>800 zł</b></li>
+        <li><span>Kurs ADR, żurawie HDS, podesty ruchome</span><b>zapytaj</b></li>
+      </ul>
+      <a class="btn btn--b" style="margin-top:24px" href="#">Zobacz wszystkie szkolenia</a>
+    </div>
+    <div class="pro-img"><img src="img/opt/wnetrze.webp" alt="Szkolenie operatorów wózków widłowych w Szkole Jazdy ENIGMA" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="sec" id="dofinansowania">
+  <div class="wrap">
+    <div class="fund">
+      <div>
+        <p class="eyebrow" style="color:#FFD23F">Dofinansowania</p>
+        <h2>Nawet <span class="big">80%</span> mniej za kurs</h2>
+        <p>Pracodawcy z województwa świętokrzyskiego, studenci studiów dziennych i osoby chcące się przekwalifikować mogą pokryć większość kosztów ze środków zewnętrznych. Pomagamy przejść przez wniosek.</p>
+        <a class="btn btn--y" style="margin-top:22px" href="#">Sprawdź, czy Ci przysługuje</a>
+      </div>
+      <div class="fund-box">
+        <h3 style="color:#fff">Z czego korzystają nasi kursanci</h3>
+        <ul>
+          <li>Baza Usług Rozwojowych, projekt „Pracownik kapitałem firmy”</li>
+          <li>Dofinansowania dla studentów studiów stacjonarnych</li>
+          <li>Rabat 500 zł na kategorię B z okazji 35-lecia szkoły</li>
+          <li>Rozłożenie płatności na raty 0%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--mist" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2>Przyjdź, zadzwoń albo zapisz się online</h2>
+    <div class="contact" style="margin-top:30px">
+      <div class="cbox">
+        <div class="crow"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><b>Biuro w Kielcach</b>ul. Paderewskiego 14, 25-004 Kielce<br><span style="color:var(--muted)">Drugi oddział: Skarżysko-Kamienna</span></div></div>
+        <div class="crow"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><b>Godziny otwarcia</b>poniedziałek - piątek, 10:00 - 18:00</div></div>
+        <div class="crow"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <div><b>Telefon</b><a href="tel:+48413431180">41 343 11 80</a> &nbsp;&middot;&nbsp; <a href="tel:+48602309181">602 309 181</a></div></div>
+        <div class="crow"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+          <div><b>E-mail</b><a href="mailto:biuro@enigma.kielce.pl">biuro@enigma.kielce.pl</a></div></div>
+        <div id="zapisy" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+          <a class="btn btn--y" href="#">Zapisz się na kurs</a>
+          <a class="btn btn--b" href="#">Kup kurs online</a>
+        </div>
+      </div>
+      <div class="map">
+        <div>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1C6DD0" stroke-width="1.6" style="margin:0 auto 12px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <b>Tu stanie mapa dojazdu</b>
+          <p style="color:var(--muted);font-size:15px;margin:8px 0 0">Mapa Google z pinezką biura i placu manewrowego, wczytywana dopiero po kliknięciu, żeby nie spowalniała strony.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="#" style="margin-bottom:14px">
+          <span class="mark">L</span>
+          <span><b style="color:#fff">ENIGMA</b><span style="color:#7E93A9">Szkoła Jazdy Kielce</span></span>
+        </a>
+        <p style="margin:0;max-width:34ch">Ośrodek Szkolenia Kierowców ENIGMA. Uczymy jeździć nieprzerwanie od 1 września 1991 roku.</p>
+      </div>
+      <div><h4>Prawo jazdy</h4><ul>
+        <li><a href="#">Kategoria B</a></li><li><a href="#">Kategoria A, A1, A2</a></li>
+        <li><a href="#">Kategoria C i C+E</a></li><li><a href="#">Kategoria D</a></li>
+        <li><a href="#">Jazdy doszkalające</a></li></ul></div>
+      <div><h4>Szkolenia</h4><ul>
+        <li><a href="#">Kwalifikacja wstępna</a></li><li><a href="#">Szkolenie okresowe</a></li>
+        <li><a href="#">Wózki widłowe</a></li><li><a href="#">ADR</a></li><li><a href="#">Operator maszyn</a></li></ul></div>
+      <div><h4>Szkoła</h4><ul>
+        <li><a href="#">O nas</a></li><li><a href="#">Certyfikat ISO</a></li>
+        <li><a href="#">Badania</a></li><li><a href="#">E-sklep</a></li><li><a href="#">Kontakt</a></li></ul></div>
+    </div>
+    <div class="copy">&copy; 2026 Szkoła Jazdy ENIGMA, Kielce. Wszelkie prawa zastrzeżone.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn--b btn--sm" href="tel:+48602309181">Zadzwoń</a>
+  <a class="btn btn--y btn--sm" href="#zapisy">Zapisz się</a>
+</div>
+
+</body>
+</html>
