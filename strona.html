@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Szkoła Jazdy ENIGMA Kielce - prawo jazdy od 1991 roku</title>
-<meta name="description" content="Szkoła Jazdy ENIGMA w Kielcach. Kursy prawa jazdy kat. AM, A, A1, A2, B, B1, B+E, C, C+E, D oraz szkolenia zawodowe. Od 1991 roku, ponad 50 000 kursantów, certyfikat ISO 9001.">
+<meta name="description" content="Szkoła Jazdy ENIGMA w Kielcach. Kursy prawa jazdy kat. AM, A, A1, A2, B, B1, B+E, C, C+E, D oraz szkolenia zawodowe. Od 1991 roku, ponad 70 000 kursantów, certyfikat ISO 9001.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -56,8 +56,9 @@ section[id]{scroll-margin-top:96px}
 
 /* ---------- nagłówek ---------- */
 .utility{border-bottom:1px solid var(--line-2);background:#fff}
-.utility .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:42px;
-  font-size:13.5px;color:var(--grey);flex-wrap:wrap}
+.utility .wrap{display:flex;justify-content:center;align-items:center;gap:8px;min-height:42px;
+  font-size:13.5px;color:var(--grey);flex-wrap:wrap;text-align:center}
+.utility .uline{display:inline}
 .utility a{text-decoration:none;color:var(--ink);font-weight:500}
 .utility .sep{color:var(--line);margin:0 12px}
 header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(10px);
@@ -70,7 +71,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdro
 .menu a::after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:1px;background:var(--ink);transition:right .26s var(--ease)}
 .menu a:hover::after{right:0}
 .nav-r{display:flex;align-items:center;gap:20px}
-.nav-r .ph{font:600 16px/1 Inter;text-decoration:none;white-space:nowrap}
+.nav-r .ph{font:600 16px/1 Inter;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.nav-r .ph svg{color:var(--blue)}
 .burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
 .burger i{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px 0}
 
@@ -87,9 +89,14 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdro
 .hero p.sub{font-size:19px;line-height:1.6;color:rgba(255,255,255,.76);margin-top:24px;max-width:52ch}
 .hero .acts{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px;align-items:center}
 .hero .acts .tlink{color:#fff}
-.quote{margin-top:46px;padding-left:20px;border-left:2px solid var(--gold);max-width:46ch}
-.quote b{display:block;font-family:Archivo;font-weight:600;font-size:17px;letter-spacing:-.01em}
-.quote span{font-size:15px;color:rgba(255,255,255,.66)}
+/* hasło z naklejek na pojazdach - te same dwa kolory */
+.livery{display:flex;align-items:center;gap:14px;margin-top:46px;flex-wrap:wrap}
+.lv{font-family:Archivo;font-weight:700;font-size:clamp(17px,2vw,22px);letter-spacing:-.01em;
+  color:#fff;padding:12px 20px;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.lv--blue{background:#1B64C8}
+.lv--red{background:#D01F26}
+.lv-arrow{color:rgba(255,255,255,.55);flex:none}
+.livery-note{font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.7);margin-top:18px;max-width:50ch}
 
 .facts{border-top:1px solid rgba(255,255,255,.14);position:relative;z-index:2;background:rgba(14,19,23,.5)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -145,6 +152,68 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdro
 .fcard .kup{background:var(--ink);color:#fff;font:500 14.5px/1 Inter;padding:13px 18px;border-radius:3px;
   display:inline-flex;align-items:center;gap:8px;transition:background .2s;white-space:nowrap}
 .fcard:hover .kup{background:var(--blue)}
+
+/* ---------- mapa dojazdu ---------- */
+.mapbtn{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;height:100%;
+  min-height:280px;padding:34px 30px;background:var(--paper);border:1px solid var(--line);
+  border-radius:5px;cursor:pointer;text-align:left;font:inherit;color:inherit;
+  transition:border-color .22s var(--ease),background .22s}
+.mapbtn:hover{border-color:#C9CEC7;background:#fff}
+.mapadr{font-family:Archivo;font-weight:600;font-size:19px;letter-spacing:-.01em;margin-top:14px}
+.mapgo{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:500 15px/1 Inter;color:var(--blue)}
+.mapbtn:hover .mapgo svg{transform:translateX(4px)}
+.mapgo svg{transition:transform .22s var(--ease)}
+.mapinfo{font-size:14px;color:var(--grey-2);margin-top:auto;padding-top:20px;line-height:1.5}
+.cmap iframe{width:100%;height:100%;min-height:280px;border:0;border-radius:5px;display:block}
+
+/* ---------- trzy kafelki szybkiego wyboru ---------- */
+.qpick{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.qcard{display:flex;flex-direction:column;padding:30px 26px 26px;background:#fff;
+  border:1px solid var(--line);border-radius:5px;text-decoration:none;
+  transition:border-color .24s var(--ease),box-shadow .24s var(--ease),transform .24s var(--ease)}
+.qcard:hover{border-color:#C9CEC7;box-shadow:0 16px 38px rgba(14,19,23,.09);transform:translateY(-3px)}
+.qnum{font:500 11.5px/1 Inter;letter-spacing:.2em;color:var(--gold)}
+.qcard h3{font-size:20px;margin-top:14px}
+.qcard p{font-size:15px;color:var(--grey);line-height:1.55;margin-top:9px;flex:1}
+.qgo{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:500 15px/1 Inter;color:var(--blue)}
+.qcard:hover .qgo svg{transform:translateX(4px)}
+.qgo svg{transition:transform .22s var(--ease)}
+@media(max-width:860px){.qpick{grid-template-columns:1fr}}
+
+/* ---------- lista szkolen: klikalne pozycje ---------- */
+.plist a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding:17px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;
+  transition:padding .2s var(--ease),color .2s}
+.plist a:hover{padding-left:10px;color:var(--blue)}
+.plist a b{font-family:Archivo;font-weight:500;white-space:nowrap}
+.pfigs{display:grid;gap:18px;align-content:start}
+.pfigs figure{margin:0}
+.pfigs img{border-radius:5px}
+
+/* ---------- kategorie w grupach ---------- */
+.kgroups{margin-top:48px}
+.kgroup+.kgroup{margin-top:54px;padding-top:46px;border-top:1px solid var(--line)}
+.kghead h3{font-size:22px}
+.kghead p{font-size:15.5px;color:var(--grey);margin-top:7px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}
+.kcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:5px;
+  padding:22px 20px 18px;text-decoration:none;
+  transition:border-color .24s var(--ease),box-shadow .24s var(--ease),transform .24s var(--ease)}
+.kcard:hover{border-color:#C9CEC7;box-shadow:0 14px 34px rgba(14,19,23,.09);transform:translateY(-3px)}
+.kplate{width:50px;height:50px;border-radius:4px;background:var(--blue);color:#fff;
+  display:grid;place-items:center;font:600 17px/1 Archivo;letter-spacing:.01em}
+.kin{flex:1;margin-top:16px}
+.kin h3{font-size:18px}
+.kdesc{display:block;font-size:14.5px;color:var(--grey);line-height:1.5;margin-top:7px}
+.kfoot{margin-top:20px;padding-top:15px;border-top:1px solid var(--line-2);
+  display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.kfoot .cena small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-2)}
+.kfoot .cena b{font-family:Archivo;font-weight:500;font-size:21px;letter-spacing:-.025em}
+.kfoot .kup{background:var(--ink);color:#fff;font:500 13.5px/1 Inter;padding:11px 14px;border-radius:3px;
+  display:inline-flex;align-items:center;gap:7px;transition:background .2s;white-space:nowrap}
+.kcard:hover .kup{background:var(--blue)}
+@media(max-width:1000px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.kgrid{grid-template-columns:1fr}}
 
 /* ---------- pozostale kategorie ---------- */
 .more-h{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-top:58px;flex-wrap:wrap}
@@ -268,8 +337,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
 <body>
 
 <div class="utility"><div class="wrap">
-  <div class="left">ul. Paderewskiego 14, Kielce <span class="sep">/</span> poniedziałek - piątek, 10:00 - 18:00 <span class="sep">/</span> oddział Skarżysko-Kamienna</div>
-  <div><a href="tel:+48413431180">41 343 11 80</a> <span class="sep">/</span> <a href="tel:+48602309181">602 309 181</a></div>
+  <div class="uline">Adres: ul. Paderewskiego 14, Kielce <span class="sep">/</span> godziny pracy: poniedziałek - piątek, 10:00 - 18:00 <span class="sep">/</span> telefony: <a href="tel:+48413431180">41 343 11 80</a>, <a href="tel:+48602309181">602 309 181</a></div>
 </div></div>
 
 <header><div class="wrap nav">
@@ -284,7 +352,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <div class="nav-r">
-    <a class="ph" href="tel:+48602309181">602 309 181</a>
+    <a class="ph" href="tel:+48602309181"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.1z"/></svg>602 309 181</a>
     <a class="btn btn--ink" href="#kontakt">Zapisz się</a>
     <button class="burger" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
@@ -293,142 +361,147 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
 <section class="hero">
   <img class="ph-bg" src="img/opt/hero_budynek.webp" alt="Flota pojazdów szkoleniowych Szkoły Jazdy ENIGMA w Kielcach">
   <div class="wrap"><div class="inner">
-    <p class="label">Ośrodek szkolenia kierowców &middot; Kielce od 1991</p>
+    <p class="label">Ośrodek szkolenia kierowców &middot; Kielce - działamy od 1991</p>
     <h1>Prawo jazdy<br><span class="thin">w rękach ludzi, którzy</span><br>robią to od 35 lat</h1>
-    <p class="sub">Dwanaście kategorii w jednym miejscu, od motoroweru po ciągnik siodłowy z naczepą. Własna flota, własny plac manewrowy i kadra, która wyszkoliła ponad pięćdziesiąt tysięcy kierowców.</p>
+    <p class="sub">Dwanaście kategorii w jednym miejscu, od motoroweru po autobus. Własna flota, własny plac manewrowy i kadra, która szkoli kierowców nieprzerwanie od 1991 roku.</p>
     <div class="acts">
       <a class="btn btn--light" href="#kategorie">Wybierz kategorię</a>
       <a class="tlink" href="#terminy">Najbliższe terminy<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="quote">
-      <b>Tym jeździsz, tym zdajesz</b>
-      <span>Na egzamin państwowy w WORD Kielce podstawiamy nasz pojazd szkoleniowy.</span>
+    <div class="livery">
+      <span class="lv lv--blue">Tym jeździsz</span>
+      <svg class="lv-arrow" width="26" height="16" viewBox="0 0 26 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 8h22M17 2l6 6-6 6"/></svg>
+      <span class="lv lv--red">Tym zdajesz</span>
     </div>
+    <p class="livery-note">Na egzamin państwowy w WORD Kielce podstawiamy nasze pojazdy szkoleniowe. Jako jedyny ośrodek w Kielcach robimy to w każdej kategorii.</p>
   </div></div>
   <div class="facts"><div class="wrap">
     <div><b>1991</b><span>rok rozpoczęcia działalności</span></div>
-    <div><b>50 000+</b><span>wyszkolonych kursantów</span></div>
+    <div><b>70 000+</b><span>wyszkolonych kursantów</span></div>
     <div><b>ISO 9001</b><span>certyfikat PN-EN ISO 9001:2015-10</span></div>
     <div><b>12</b><span>kategorii prawa jazdy</span></div>
   </div></div>
+</section>
+
+<section class="sec sec--tight" id="szybki-wybor">
+  <div class="wrap">
+    <div class="qpick">
+      <a class="qcard" href="#kategorie">
+        <span class="qnum">01</span>
+        <h3>Prawo jazdy</h3>
+        <p>Wszystkie kategorie od AM do D, z cenami i zakupem online.</p>
+        <span class="qgo">Zobacz kategorie<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="qcard" href="#szkolenia">
+        <span class="qnum">02</span>
+        <h3>Szkolenia dla kierowców zawodowych</h3>
+        <p>Kwalifikacje zawodowe, szkolenia okresowe, ADR.</p>
+        <span class="qgo">Zobacz szkolenia<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="qcard" href="#szkolenia">
+        <span class="qnum">03</span>
+        <h3>Kursy specjalistyczne</h3>
+        <p>Wózki widłowe, żurawie HDS, nalewaki i uprawnienia TDT.</p>
+        <span class="qgo">Zobacz kursy<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="sec" id="kategorie">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <p class="label">01 &middot; Kursy prawa jazdy</p>
-        <h2 style="margin-top:16px">Kurs kupisz online<br>i zaczynasz w poniedziałek</h2>
+        <p class="label">Kursy prawa jazdy</p>
+        <h2 style="margin-top:16px">Kurs kupujesz dowolnego dnia,<br>zajęcia zaczynasz w poniedziałek</h2>
         <div class="rule"></div>
-        <p class="intro">Ceny z naszego e-sklepu. Płatność można rozłożyć na raty, a zapisu dokonać bez wizyty w biurze, o dowolnej porze.</p>
+        <p class="intro">Nowy kurs rusza w każdy poniedziałek. Ceny pochodzą z naszego e-sklepu, płatność można rozłożyć na raty, a zapisu dokonać bez wizyty w biurze, o dowolnej porze.</p>
       </div>
       <a class="btn btn--ink" href="#">Przejdź do e-sklepu</a>
     </div>
 
-    <div class="feat">
-      <a class="fcard" href="#">
-        <span class="ph">
-          <img src="img/opt/bmw_i3.webp" alt="Samochód szkoleniowy Szkoły Jazdy ENIGMA" loading="lazy">
-          <span class="tag gold">Najczęściej wybierany</span>
-          <span class="kat">B</span>
-        </span>
-        <span class="in">
-          <h3>Samochód osobowy</h3>
-          <ul>
-            <li>Do wyboru skrzynia manualna, automat albo nauka elektrykiem</li>
-            <li>Wersja dla osób z niepełnosprawnością oraz kurs po angielsku</li>
-            <li>Na 35-lecie szkoły rabat 500 zł</li>
-          </ul>
-          <span class="foot">
-            <span class="cena"><small>od</small><b>3 800 zł</b></span>
-            <span class="kup">Kup online<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </span>
-      </a>
-
-      <a class="fcard" href="#">
-        <span class="ph">
-          <img src="img/opt/zestaw_ce.webp" alt="Ciągnik siodłowy z naczepą Szkoły Jazdy ENIGMA" loading="lazy">
-          <span class="tag">Dla zawodowców</span>
-          <span class="kat">C+E</span>
-        </span>
-        <span class="in">
-          <h3>Ciągnik z naczepą</h3>
-          <ul>
-            <li>Pierwszy w Kielcach ciągnik siodłowy z naczepą</li>
-            <li>Naczepa spełnia wymagania egzaminacyjne od 2026 roku</li>
-            <li>W pakiecie z kategorią C taniej niż osobno</li>
-          </ul>
-          <span class="foot">
-            <span class="cena"><small>od</small><b>6 000 zł</b></span>
-            <span class="kup">Kup online<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </span>
-      </a>
-
-      <a class="fcard" href="#">
-        <span class="ph">
-          <img src="img/opt/motocykl_a.webp" alt="Motocykl szkoleniowy na placu manewrowym" loading="lazy">
-          <span class="tag">A, A1, A2</span>
-          <span class="kat">A</span>
-        </span>
-        <span class="in">
-          <h3>Motocykl</h3>
-          <ul>
-            <li>Własny plac manewrowy, bez wyjazdów poza Kielce</li>
-            <li>Motocykle dobrane do kategorii i poziomu kursanta</li>
-            <li>Jazdy doszkalające również po zdanym egzaminie</li>
-          </ul>
-          <span class="foot">
-            <span class="cena"><small>od</small><b>3 400 zł</b></span>
-            <span class="kup">Kup online<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </span>
-        </span>
-      </a>
-    </div>
-
-    <div class="more-h">
-      <h3>Pozostałe kategorie</h3>
-      <p>Każdą z nich również kupi Pan przez e-sklep</p>
-    </div>
-
-    <div class="cats">
-      <a class="cat" href="#">
-        <span class="plate">C</span><span><h3>Samochód ciężarowy</h3></span>
-        <span class="desc">Szkolimy na MAN TGL z automatyczną skrzynią biegów, pierwszej takiej ciężarówce w Kielcach.</span>
-        <span class="price"><small>od</small><b>5 000 zł</b></span>
-        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="cat" href="#">
-        <span class="plate">D</span><span><h3>Autobus</h3></span>
-        <span class="desc">Kurs po kategorii C lub po B, także w pakiecie z kwalifikacją wstępną.</span>
-        <span class="price"><small>od</small><b>7 000 zł</b></span>
-        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="cat" href="#">
-        <span class="plate">B+E</span><span><h3>Przyczepa</h3></span>
-        <span class="desc">Pierwszy w Kielcach elektryczny zestaw szkoleniowy na kategorię B+E.</span>
-        <span class="price"><small>od</small><b>2 500 zł</b></span>
-        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="cat" href="#">
-        <span class="plate">AM</span><span><h3>Motorower</h3></span>
-        <span class="desc">Od czternastego roku życia, pełne szkolenie teoretyczne i praktyczne.</span>
-        <span class="price"><small>od</small><b>1 700 zł</b></span>
-        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="cat" href="#">
-        <span class="plate">B1</span><span><h3>Czterokołowiec</h3></span>
-        <span class="desc">Kategoria B1 od szesnastego roku życia.</span>
-        <span class="price"><small>cena</small><b>3 600 zł</b></span>
-        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+    <div class="kgroups">
+      <div class="kgroup">
+        <div class="kghead"><h3>Kursy motocyklowe</h3><p>Od skutera po motocykl bez ograniczeń mocy.</p></div>
+        <div class="kgrid">
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">AM</span>
+          <span class="kin"><h3>Motorower</h3><span class="kdesc">Od 14. roku życia.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>1 700 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">A1</span>
+          <span class="kin"><h3>Motocykl do 125 cm3</h3><span class="kdesc">Od 16. roku życia.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>3 400 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">A2</span>
+          <span class="kin"><h3>Motocykl o średniej mocy</h3><span class="kdesc">Od 18. roku życia.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>3 400 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">A</span>
+          <span class="kin"><h3>Motocykl bez ograniczeń</h3><span class="kdesc">Od 24 lat albo po 2 latach z A2.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>3 400 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        </div>
+      </div>
+      <div class="kgroup">
+        <div class="kghead"><h3>Kursy samochodowe</h3><p>Najczęściej wybierana grupa kursów.</p></div>
+        <div class="kgrid">
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">B</span>
+          <span class="kin"><h3>Samochód osobowy</h3><span class="kdesc">Manual, automat albo nauka elektrykiem.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>3 800 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">B1</span>
+          <span class="kin"><h3>Czterokołowiec</h3><span class="kdesc">Od 16. roku życia.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>3 600 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">B+E</span>
+          <span class="kin"><h3>Samochód z przyczepą</h3><span class="kdesc">Pierwszy w Kielcach elektryczny zestaw szkoleniowy.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>2 500 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        </div>
+      </div>
+      <div class="kgroup">
+        <div class="kghead"><h3>Kursy dla kierowców samochodów ciężarowych</h3><p>Szkolimy na MAN TGL z automatyczną skrzynią biegów.</p></div>
+        <div class="kgrid">
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">C</span>
+          <span class="kin"><h3>Samochód ciężarowy</h3><span class="kdesc">Pierwsza taka ciężarówka z automatem w Kielcach.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>5 000 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">C+E</span>
+          <span class="kin"><h3>Ciągnik siodłowy z naczepą</h3><span class="kdesc">Pierwszy w Kielcach zestaw szkoleniowy tej klasy.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>6 000 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        </div>
+      </div>
+      <div class="kgroup">
+        <div class="kghead"><h3>Kursy dla kierowców autobusów</h3><p>Cena zależy od tego, jaką kategorię ma się już w prawie jazdy.</p></div>
+        <div class="kgrid">
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">D</span>
+          <span class="kin"><h3>Autobus, po kategorii C</h3><span class="kdesc">Krótsza ścieżka dla kierowców ciężarówek.</span></span>
+          <span class="kfoot"><span class="cena"><small>od</small><b>7 000 zł</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        <a class="kcard" href="https://enigma.kielce.pl/sklep">
+          <span class="kplate">D</span>
+          <span class="kin"><h3>Autobus, po kategorii B</h3><span class="kdesc">Pełny kurs dla kierowców samochodów osobowych.</span></span>
+          <span class="kfoot"><span class="cena"><small>cena</small><b>w e-sklepie</b></span><span class="kup">Kup online<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+        </a>
+        </div>
+      </div>
     </div>
 
     <div class="buy">
       <div>
-        <h3>Kurs kupiony dziś, zajęcia w najbliższy poniedziałek</h3>
-        <p>W e-sklepie kupi Pan kurs prawa jazdy, jazdy doszkalające i szkolenia zawodowe. Płatność online, raty, faktura na firmę.</p>
+        <h3>Kurs kupiony dowolnego dnia - zajęcia zawsze od poniedziałku</h3>
+        <p>W e-sklepie kupisz kurs prawa jazdy, jazdy doszkalające i szkolenia zawodowe. Płatność online, raty, faktura na firmę.</p>
       </div>
       <a class="btn btn--light" href="#">Przejdź do e-sklepu</a>
     </div>
@@ -440,12 +513,12 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
 <section class="sec paper">
   <div class="wrap">
     <p class="label">Co nas wyróżnia</p>
-    <h2 style="margin-top:16px;max-width:16ch">Cztery rzeczy, których nie znajdzie Pan gdzie indziej</h2>
+    <h2 style="margin-top:16px;max-width:16ch">Cztery rzeczy, których nie znajdziesz gdzie indziej</h2>
     <div class="reasons">
       <div class="reason">
         <span class="no">01</span>
         <h3>Egzamin naszym pojazdem</h3>
-        <p>Na egzamin państwowy w WORD Kielce podstawiamy ten sam pojazd, którym Pan jeździł przez cały kurs. Formalności załatwiamy po swojej stronie.</p>
+        <p>Na egzamin państwowy w WORD Kielce podstawiamy ten sam pojazd, którym jeździliście przez cały kurs. Jako jedyny ośrodek w Kielcach robimy to w każdej kategorii, a formalności załatwiamy po swojej stronie.</p>
       </div>
       <div class="reason">
         <span class="no">02</span>
@@ -454,8 +527,8 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
       </div>
       <div class="reason">
         <span class="no">03</span>
-        <h3>Kursy dla osób z niepełnosprawnością</h3>
-        <p>Samochód z automatyczną skrzynią biegów przystosowany do niepełnosprawności kończyn dolnych i górnych. Egzamin można zdawać naszym pojazdem.</p>
+        <h3>Nowy kurs w każdy poniedziałek</h3>
+        <p>Nie trzeba czekać na zebranie się grupy. Kurs kupiony w dowolnym dniu rusza w najbliższy poniedziałek, a zapisu można dokonać przez e-sklep o dowolnej porze.</p>
       </div>
       <div class="reason">
         <span class="no">04</span>
@@ -486,10 +559,10 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
       <div>
         <p class="label">Jak wygląda zapis</p>
         <ol class="steps" style="margin-top:20px">
-          <li><b>01</b><span>Wybiera Pan kategorię i rezerwuje miejsce online albo telefonicznie.</span></li>
-          <li><b>02</b><span>Badanie lekarskie wykonuje Pan w budynku szkoły, u współpracujących lekarzy.</span></li>
-          <li><b>03</b><span>Teoria stacjonarnie albo w formie e-learningu, terminy jazd ustala Pan z instruktorem.</span></li>
-          <li><b>04</b><span>Na egzamin w WORD podstawiamy ten sam pojazd, którym Pan jeździł.</span></li>
+          <li><b>01</b><span>Wybierasz kategorię i rezerwujesz miejsce online albo telefonicznie.</span></li>
+          <li><b>02</b><span>Badanie lekarskie wykonujesz w budynku szkoły, u współpracujących lekarzy.</span></li>
+          <li><b>03</b><span>Teoria stacjonarnie albo w formie e-learningu, terminy jazd ustalasz z instruktorem.</span></li>
+          <li><b>04</b><span>Na egzamin w WORD podstawiamy ten sam pojazd, którym uczyliście się jeździć.</span></li>
         </ol>
         <a class="btn btn--ink" style="margin-top:30px" href="#kontakt">Zarezerwuj miejsce</a>
       </div>
@@ -503,18 +576,20 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
       <p class="label">Dla kierowców zawodowych</p>
       <h2 style="margin-top:16px">Szkolenia i uprawnienia</h2>
       <div class="rule"></div>
-      <p class="intro">ENIGMA to nie tylko prawo jazdy. Prowadzimy kursy, które otwierają drogę do pracy w transporcie, logistyce i budownictwie.</p>
+      <p class="intro">ENIGMA to nie tylko prawo jazdy. Prowadzimy kursy, które otwierają drogę do pracy w transporcie i logistyce. Pod każdą pozycją kryje się osobna podstrona z pełnym zakresem i terminami.</p>
       <div class="plist">
-        <div><span>Kwalifikacja wstępna przyspieszona</span><b>2 600 zł</b></div>
-        <div><span>Operator wózka widłowego</span><b>1 500 zł</b></div>
-        <div><span>Operator koparko-ładowarki, klasa III</span><b>2 150 zł</b></div>
-        <div><span>Nalewaki NO, uprawnienia TDT</span><b>od 1 450 zł</b></div>
-        <div><span>Czas pracy kierowcy i tachografy</span><b>800 zł</b></div>
-        <div><span>ADR, żurawie HDS, podesty ruchome</span><b>zapytaj</b></div>
+        <a href="#"><span>Kwalifikacje zawodowe</span><b>od 1 200 zł</b></a>
+        <a href="#"><span>Szkolenia okresowe dla kierowców</span><b>od 1 200 zł</b></a>
+        <a href="#"><span>Operator wózka widłowego</span><b>1 500 zł</b></a>
+        <a href="#"><span>Operator żurawia HDS</span><b>od 1 450 zł</b></a>
+        <a href="#"><span>ADR, przewóz materiałów niebezpiecznych</span><b>od 1 200 zł</b></a>
+        <a href="#"><span>Nalewaki NO, uprawnienia TDT</span><b>od 1 450 zł</b></a>
       </div>
-      <a class="tlink" style="margin-top:28px" href="#">Zobacz wszystkie szkolenia<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
-    <figure><img src="img/opt/wnetrze.webp" alt="Szkolenie operatorów wózków widłowych na placu Szkoły Jazdy ENIGMA" loading="lazy"></figure>
+    <div class="pfigs">
+      <figure><img src="img/opt/wnetrze.webp" alt="Szkolenie operatorów wózków widłowych na placu Szkoły Jazdy ENIGMA" loading="lazy"></figure>
+      <figure><img src="img/opt/szkolenia.webp" alt="Szkolenia zawodowe prowadzone przez Szkołę Jazdy ENIGMA" loading="lazy"></figure>
+    </div>
   </div>
 </section>
 
@@ -523,18 +598,13 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
     <div>
       <p class="label">Dofinansowania</p>
       <h2 style="margin-top:18px">Kurs nie musi kosztować tyle, ile widnieje w cenniku</h2>
-      <p>Pracodawcy z województwa świętokrzyskiego, studenci studiów stacjonarnych oraz osoby planujące przekwalifikowanie mogą pokryć większość kosztów ze środków zewnętrznych. Przeprowadzamy przez wniosek od początku do końca.</p>
-      <a class="btn btn--clear" style="margin-top:32px" href="#kontakt">Sprawdź, co Panu przysługuje</a>
+      <p>Pracodawcy z województwa świętokrzyskiego, studenci studiów stacjonarnych oraz osoby planujące przekwalifikowanie mogą pokryć większość kosztów ze środków zewnętrznych. Nabory zmieniają się mniej więcej co kwartał, dlatego pod przyciskiem obok zawsze znajduje się ten, który trwa w tej chwili.</p>
+      <a class="btn btn--clear" style="margin-top:32px" href="#kontakt">Sprawdź, co Ci przysługuje</a>
     </div>
     <div>
-      <p class="pct">80<sup>%</sup></p>
+      <p class="pct">90<sup>%</sup></p>
       <p style="color:rgba(255,255,255,.6);font-size:14.5px;margin-top:6px">maksymalny poziom dofinansowania, z jakiego korzystali nasi kursanci</p>
-      <ul>
-        <li>Baza Usług Rozwojowych, projekt „Pracownik kapitałem firmy”</li>
-        <li>Dofinansowania dla studentów studiów stacjonarnych</li>
-        <li>Rabat 500 zł na kategorię B z okazji 35-lecia szkoły</li>
-        <li>Rozłożenie płatności na raty</li>
-      </ul>
+      <a class="btn btn--light" style="margin-top:26px" href="#">Chcesz skorzystać? Poznaj szczegóły</a>
     </div>
   </div>
 </section>
@@ -546,7 +616,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
     <div class="rule"></div>
     <div class="contact">
       <div class="cgrid">
-        <div><p class="k">Adres</p><p class="v">ul. Paderewskiego 14, 25-004 Kielce<br><span style="color:var(--grey);font-size:15.5px">Drugi oddział: Skarżysko-Kamienna</span></p></div>
+        <div><p class="k">Adres</p><p class="v">ul. Paderewskiego 14, 25-004 Kielce</p></div>
         <div><p class="k">Godziny otwarcia</p><p class="v">poniedziałek - piątek, 10:00 - 18:00</p></div>
         <div><p class="k">Telefon</p><p class="v"><a href="tel:+48413431180">41 343 11 80</a> &nbsp;&nbsp;<a href="tel:+48602309181">602 309 181</a></p></div>
         <div><p class="k">E-mail</p><p class="v"><a href="mailto:biuro@enigma.kielce.pl">biuro@enigma.kielce.pl</a></p></div>
@@ -555,11 +625,13 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
           <a class="btn btn--out" style="margin-left:10px" href="#">Kup kurs online</a>
         </div>
       </div>
-      <div class="cmap">
-        <div>
-          <p class="label">Dojazd</p>
-          <p style="margin-top:14px;font-size:16px">Tu znajdzie się mapa z pinezką biura i placu manewrowego, wczytywana dopiero po kliknięciu, żeby nie spowalniała strony.</p>
-        </div>
+      <div class="cmap" id="mapa">
+        <button class="mapbtn" type="button" aria-label="Pokaż mapę dojazdu">
+          <span class="label">Dojazd</span>
+          <span class="mapadr">ul. Paderewskiego 14, 25-004 Kielce</span>
+          <span class="mapgo">Pokaż mapę<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="mapinfo">Mapa wczytuje się dopiero po kliknięciu, żeby nie spowalniała strony.</span>
+        </button>
       </div>
     </div>
   </div>
@@ -595,5 +667,16 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
   <a class="p" href="#kontakt">Zapisz się</a>
 </nav>
 
+<script>
+/* Mapa wczytuje sie dopiero po kliknieciu: zadnych zapytan do Google przy wejsciu na strone. */
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.mapbtn'); if(!b) return;
+  var f=document.createElement('iframe');
+  f.src='https://maps.google.com/maps?q='+encodeURIComponent('ul. Paderewskiego 14, 25-004 Kielce')+'&z=16&output=embed';
+  f.loading='lazy'; f.title='Mapa dojazdu do Szkoly Jazdy ENIGMA, ul. Paderewskiego 14 w Kielcach';
+  f.referrerPolicy='no-referrer-when-downgrade';
+  b.replaceWith(f);
+});
+</script>
 </body>
 </html>
