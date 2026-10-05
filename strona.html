@@ -154,17 +154,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdro
 .fcard:hover .kup{background:var(--blue)}
 
 /* ---------- mapa dojazdu ---------- */
-.mapbtn{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;height:100%;
-  min-height:280px;padding:34px 30px;background:var(--paper);border:1px solid var(--line);
-  border-radius:5px;cursor:pointer;text-align:left;font:inherit;color:inherit;
-  transition:border-color .22s var(--ease),background .22s}
-.mapbtn:hover{border-color:#C9CEC7;background:#fff}
-.mapadr{font-family:Archivo;font-weight:600;font-size:19px;letter-spacing:-.01em;margin-top:14px}
-.mapgo{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:500 15px/1 Inter;color:var(--blue)}
-.mapbtn:hover .mapgo svg{transform:translateX(4px)}
-.mapgo svg{transition:transform .22s var(--ease)}
-.mapinfo{font-size:14px;color:var(--grey-2);margin-top:auto;padding-top:20px;line-height:1.5}
-.cmap iframe{width:100%;height:100%;min-height:280px;border:0;border-radius:5px;display:block}
+.cmap iframe{width:100%;height:100%;min-height:320px;border:1px solid var(--line);border-radius:5px;display:block}
 
 /* ---------- trzy kafelki szybkiego wyboru ---------- */
 .qpick{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -629,12 +619,9 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
         </div>
       </div>
       <div class="cmap" id="mapa">
-        <button class="mapbtn" type="button" aria-label="Pokaż mapę dojazdu">
-          <span class="label">Dojazd</span>
-          <span class="mapadr">ul. Paderewskiego 14, 25-004 Kielce</span>
-          <span class="mapgo">Pokaż mapę<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="mapinfo">Mapa wczytuje się dopiero po kliknięciu, żeby nie spowalniała strony.</span>
-        </button>
+        <iframe src="https://maps.google.com/maps?q=ul.%20Paderewskiego%2014%2C%2025-004%20Kielce&amp;z=16&amp;output=embed"
+                title="Mapa dojazdu do Szkoły Jazdy ENIGMA, ul. Paderewskiego 14 w Kielcach"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -670,16 +657,5 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
   <a class="p" href="#kontakt">Zapisz się</a>
 </nav>
 
-<script>
-/* Mapa wczytuje sie dopiero po kliknieciu: zadnych zapytan do Google przy wejsciu na strone. */
-document.addEventListener('click',function(e){
-  var b=e.target.closest('.mapbtn'); if(!b) return;
-  var f=document.createElement('iframe');
-  f.src='https://maps.google.com/maps?q='+encodeURIComponent('ul. Paderewskiego 14, 25-004 Kielce')+'&z=16&output=embed';
-  f.loading='lazy'; f.title='Mapa dojazdu do Szkoly Jazdy ENIGMA, ul. Paderewskiego 14 w Kielcach';
-  f.referrerPolicy='no-referrer-when-downgrade';
-  b.replaceWith(f);
-});
-</script>
 </body>
 </html>
