@@ -167,16 +167,22 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdro
 .cmap iframe{width:100%;height:100%;min-height:280px;border:0;border-radius:5px;display:block}
 
 /* ---------- trzy kafelki szybkiego wyboru ---------- */
-.qpick{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.qcard{display:flex;flex-direction:column;padding:30px 26px 26px;background:#fff;
-  border:1px solid var(--line);border-radius:5px;text-decoration:none;
+.qpick{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.qcard{position:relative;display:flex;flex-direction:column;padding:34px 28px 24px;background:#fff;
+  border:1px solid #D7DAD5;border-radius:5px;text-decoration:none;overflow:hidden;
+  box-shadow:0 2px 0 rgba(14,19,23,.04),0 10px 26px rgba(14,19,23,.07);
   transition:border-color .24s var(--ease),box-shadow .24s var(--ease),transform .24s var(--ease)}
-.qcard:hover{border-color:#C9CEC7;box-shadow:0 16px 38px rgba(14,19,23,.09);transform:translateY(-3px)}
-.qcard h3{font-size:20px}
-.qcard p{font-size:15px;color:var(--grey);line-height:1.55;margin-top:9px;flex:1}
-.qgo{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:500 15px/1 Inter;color:var(--blue)}
-.qcard:hover .qgo svg{transform:translateX(4px)}
-.qgo svg{transition:transform .22s var(--ease)}
+/* pasek akcentu u gory - to on sprawia, ze karta nie znika na tle */
+.qcard::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--blue)}
+.qcard:nth-child(1)::before{background:var(--gold)}
+.qcard:hover{border-color:var(--ink);box-shadow:0 2px 0 rgba(14,19,23,.06),0 22px 48px rgba(14,19,23,.14);transform:translateY(-4px)}
+.qcard h3{font-size:23px;line-height:1.18}
+.qcard p{font-size:15.5px;color:var(--grey);line-height:1.55;margin-top:11px;flex:1}
+.qgo{display:inline-flex;align-items:center;gap:9px;margin-top:24px;padding-top:18px;
+  border-top:1px solid var(--line-2);font:600 15.5px/1 Inter;color:var(--ink);width:100%}
+.qcard:hover .qgo{color:var(--blue)}
+.qcard:hover .qgo svg{transform:translateX(5px)}
+.qgo svg{transition:transform .22s var(--ease);margin-left:auto;color:var(--blue)}
 @media(max-width:860px){.qpick{grid-template-columns:1fr}}
 
 /* ---------- lista szkolen: klikalne pozycje ---------- */
@@ -382,7 +388,7 @@ footer .fine{border-top:1px solid rgba(255,255,255,.14);margin-top:52px;padding-
   </div></div>
 </section>
 
-<section class="sec sec--tight" id="szybki-wybor">
+<section class="sec sec--tight paper" id="szybki-wybor">
   <div class="wrap">
     <div class="qpick">
       <a class="qcard" href="#kategorie">
